@@ -1,12 +1,16 @@
 defmodule Basis.Mixfile do
   use Mix.Project
 
+  @version "0.1.0"
+
   def project do
     [app: :basis,
-     version: "0.1.0",
+     version: @version,
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description(),
+     package: package(),
      deps: deps()]
   end
 
@@ -17,6 +21,12 @@ defmodule Basis.Mixfile do
     # Specify extra applications you'll use from Erlang/Elixir
     [extra_applications: [:logger],
      mod: {Basis.Application, []}]
+  end
+
+  defp description do
+    """
+    A tool to generate the api sdk
+    """
   end
 
   # Dependencies can be Hex packages:
