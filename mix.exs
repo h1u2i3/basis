@@ -23,12 +23,6 @@ defmodule Basis.Mixfile do
      mod: {Basis.Application, []}]
   end
 
-  defp description do
-    """
-    A tool to generate the api sdk
-    """
-  end
-
   # Dependencies can be Hex packages:
   #
   #   {:my_dep, "~> 0.3.0"}
@@ -40,5 +34,20 @@ defmodule Basis.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     []
+  end
+
+  defp description do
+    """
+    A tool to generate the api sdk
+    """
+  end
+
+  defp package do
+    [
+      name: :basis,
+      maintainers: ["h1u2i3"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/h1u2i3/basis"}
+    ]
   end
 end
